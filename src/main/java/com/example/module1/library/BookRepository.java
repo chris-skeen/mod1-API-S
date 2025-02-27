@@ -15,4 +15,6 @@ public interface BookRepository
     Optional<Book> findBookByTitle(String title);
 
     Book findBookById(Long id);
+
+    Optional<Book> findBookByAuthor(String author);
 }

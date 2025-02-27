@@ -58,7 +58,7 @@ public class BookService {
         }
         if (author != null && author.length() > 0 && !book.getAuthor().equals(author)) {
             Optional<Book> bookOptional = bookRepository
-                    .findBookByTitle(title);
+                    .findBookByAuthor(author);
             if (bookOptional.isPresent()) {
                 throw new IllegalStateException("Author already exists");
             }
